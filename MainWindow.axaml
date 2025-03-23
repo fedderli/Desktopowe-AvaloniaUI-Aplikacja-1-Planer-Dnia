@@ -33,37 +33,44 @@
                                    FontSize="23"
                                    Margin="20"
                                    Foreground="AliceBlue"
-                                   
                                    />
                         <TextBox Grid.Row="0" Grid.Column="1"
+                                 x:Name="InpuTextBox"
                                  Width="250"
                                  Height="50"
                                  FontSize="16"
                                  Foreground="White"
-                                 Background="Fuchsia"
+                                 Background="#5cbf21"
                                  BorderBrush="#aabbcc"
                                  BorderThickness="2"
                                  CornerRadius="14"
                                  Margin="10"
                                  />
-                        <StackPanel Grid.Row="1" Grid.Column="0" >
-                                <RadioButton Content="Obowiazki" GroupName="donuts"
+                        <StackPanel Grid.Row="1" Grid.Column="0" Margin="10">
+                                <RadioButton Content="Obowiazki" GroupName="kategoria"
                                              FontSize="25"
-                                             Foreground="White"/>
-                                <RadioButton Content="Rozwoj Osobisty" GroupName="donuts"
+                                             Foreground="White"
+                                             x:Name="RadioButtonObowiazki"/>
+                                <RadioButton Content="Rozwoj Osobisty" GroupName="kategoria"
                                              FontSize="25"
-                                             Foreground="White"/>
+                                             Foreground="White"
+                                             x:Name="RadioButtonRozwoj"/>
                         </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.Column="1" >
-                                <RadioButton Content="Relaks i Rozrywka" GroupName="donuts"
+                        <StackPanel Grid.Row="1" Grid.Column="1" Margin="10">
+                                <RadioButton Content="Relaks i Rozrywka" GroupName="kategoria"
                                              FontSize="25"
-                                             Foreground="White"/>
-                                <RadioButton Content="Zdrowie i samopoczucie" GroupName="donuts"
+                                             Foreground="White"
+                                             x:Name="RadioButtonRelaks"/>
+                                <RadioButton Content="Zdrowie i samopoczucie" GroupName="kategoria"
                                              FontSize="25"
-                                             Foreground="White"/>
+                                             Foreground="White"
+                                             x:Name="RadioButtonZdrowie"/>
                         </StackPanel>
                         <Button Grid.Row="3" Grid.Column="1"  Content="Dodaj zadanie"
-                                FontSize="30" CornerRadius="23" />
+                                FontSize="30" CornerRadius="23" Click="Button_Click" />
                 </Grid>
+                <ListBox Grid.Column="2" Background="CadetBlue" Foreground="White" Margin="10"
+                         x:Name="ZadaniaListBox">
+                </ListBox>
         </Grid>
 </Window>
