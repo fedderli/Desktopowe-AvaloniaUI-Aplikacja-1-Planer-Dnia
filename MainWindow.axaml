@@ -2,8 +2,68 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="1200" d:DesignHeight="600"
         x:Class="Desktopowe_AvaloniaUI_Aplikacja_1_Planer_Dnia.MainWindow"
-        Title="Desktopowe_AvaloniaUI_Aplikacja_1_Planer_Dnia">
-    
+        Title="Desktopowe_AvaloniaUI_Aplikacja_1_Planer_Dnia"
+        Width="1200"
+        Height="600"
+        Background="CadetBlue">
+        
+        <Grid >
+                <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Row="0" Grid.Column="0">
+                        <Grid.RowDefinitions>
+                             <RowDefinition Height="Auto"/>   
+                             <RowDefinition Height="Auto"/>  
+                             <RowDefinition Height="Auto"/>  
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Row="0" Grid.Column="0"  Text="Wpisz nazwe zadania :"
+                                   FontSize="23"
+                                   Margin="20"
+                                   Foreground="AliceBlue"
+                                   
+                                   />
+                        <TextBox Grid.Row="0" Grid.Column="1"
+                                 Width="250"
+                                 Height="50"
+                                 FontSize="16"
+                                 Foreground="White"
+                                 Background="Fuchsia"
+                                 BorderBrush="#aabbcc"
+                                 BorderThickness="2"
+                                 CornerRadius="14"
+                                 Margin="10"
+                                 />
+                        <StackPanel Grid.Row="1" Grid.Column="0" >
+                                <RadioButton Content="Obowiazki" GroupName="donuts"
+                                             FontSize="25"
+                                             Foreground="White"/>
+                                <RadioButton Content="Rozwoj Osobisty" GroupName="donuts"
+                                             FontSize="25"
+                                             Foreground="White"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="1" >
+                                <RadioButton Content="Relaks i Rozrywka" GroupName="donuts"
+                                             FontSize="25"
+                                             Foreground="White"/>
+                                <RadioButton Content="Zdrowie i samopoczucie" GroupName="donuts"
+                                             FontSize="25"
+                                             Foreground="White"/>
+                        </StackPanel>
+                        <Button Grid.Row="3" Grid.Column="1"  Content="Dodaj zadanie"
+                                FontSize="30" CornerRadius="23" />
+                </Grid>
+        </Grid>
 </Window>
